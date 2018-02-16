@@ -1,0 +1,460 @@
+@import '../bower_components/jeet/scss/index'
+#portfolio
+  margin: 1rem 0
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  flex-flow: wrap
+/* -webkit-column-count: 3;
+ *-moz-column-count: 3;
+ *column-count: 3;
+ *-webkit-column-gap: 1rem;
+ *-moz-column-gap: 1rem;
+ *column-gap: 1rem;
+ *-webkit-column-width: 33.33333333333333%;
+ *-moz-column-width: 33.33333333333333%;
+ *column-width: 33.33333333333333%;
+
+.view-tenth
+  img
+    -webkit-transform: scaleY(1)
+    -moz-transform: scaleY(1)
+    -o-transform: scaleY(1)
+    -ms-transform: scaleY(1)
+    transform: scaleY(1)
+    -webkit-transition: all 0.7s ease-in-out
+    -moz-transition: all 0.7s ease-in-out
+    -o-transition: all 0.7s ease-in-out
+    -ms-transition: all 0.7s ease-in-out
+    transition: all 0.7s ease-in-out
+    width: 100%
+  .mask
+    background-color: rgba(67, 120, 255, 0.82)
+    -webkit-transition: all 0.5s linear
+    -moz-transition: all 0.5s linear
+    -o-transition: all 0.5s linear
+    -ms-transition: all 0.5s linear
+    transition: all 0.5s linear
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)"
+    filter: alpha(opacity = 0)
+    width: 100%
+    height: 100%
+    position: absolute
+    overflow: hidden
+    top: 0
+    left: 0
+    padding: 3em
+    text-align: center
+    opacity: 0
+  h3
+    border-bottom: 1px solid rgba(255, 255, 255, 0.48)
+    -moz-transform: scale(0)
+    -o-transform: scale(0)
+    -ms-transform: scale(0)
+    transform: scale(0)
+    color: #fff
+    -webkit-transition: all 0.5s linear
+    -moz-transition: all 0.5s linear
+    -o-transition: all 0.5s linear
+    -ms-transition: all 0.5s linear
+    transition: all 0.5s linear
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)"
+    filter: alpha(opacity = 0)
+    opacity: 0
+    padding-bottom: 1em
+    margin-bottom: .5em
+    margin-top: 3.57em
+  p
+    color: #fff
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)"
+    filter: alpha(opacity = 0)
+    opacity: 0
+    -webkit-transform: scale(0)
+    -moz-transform: scale(0)
+    -o-transform: scale(0)
+    -ms-transform: scale(0)
+    transform: scale(0)
+    -webkit-transition: all 0.5s linear
+    -moz-transition: all 0.5s linear
+    -o-transition: all 0.5s linear
+    -ms-transition: all 0.5s linear
+    transition: all 0.5s linear
+    margin-top: 30px
+  &:hover
+    img
+      -webkit-transform: scale(3)
+      -moz-transform: scale(3)
+      -o-transform: scale(3)
+      -ms-transform: scale(3)
+      transform: scale(3)
+      -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)"
+      filter: alpha(opacity = 0)
+    .mask
+      -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)"
+      filter: alpha(opacity = 100)
+      opacity: 1
+    h3, p
+      -webkit-transform: scale(1)
+      -moz-transform: scale(1)
+      -o-transform: scale(1)
+      -ms-transform: scale(1)
+      transform: scale(1)
+      -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)"
+      filter: alpha(opacity = 100)
+      opacity: 1
+
+.tile
+  padding: 0 3px
+  -webkit-transform: scale(0)
+  transform: scale(0)
+  -webkit-transition: all 350ms ease
+  transition: all 350ms ease
+  box-sizing: border-box
+  width: 33.333333%
+  overflow: hidden
+  position: relative
+  img
+    max-width: 100%
+  &:hover
+
+.scale-anm
+  transform: scale(1)
+
+p
+  padding: 10px
+  text-decoration: none
+  font-size: 12px
+  color: #333
+  display: block
+
+.tile img
+  max-width: 100%
+  width: 100%
+  height: auto
+  margin-bottom: 1rem
+
+.btn
+  font-family: 'Raleway', sans-serif
+  font-size: 1rem
+  font-weight: normal
+  text-decoration: none
+  cursor: pointer
+  display: inline-block
+  line-height: normal
+  padding: .3rem 1rem
+  margin: 0.3572rem 0.1428rem 4rem 0.1428rem
+  height: auto
+  border-radius: 0.71rem 0 0.71rem 0
+  vertical-align: middle
+  -webkit-appearance: none
+  color: rgb(35, 35, 35)
+  background-color: #fff
+  &:hover
+    text-decoration: none
+    color: #fff
+    background-color: #ffae00
+
+\::-moz-focus-inner
+  border: 0
+  padding: 0
+
+.spinner-wrap
+  position: fixed
+  background: #ffffff
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+
+.windows8
+  position: absolute
+  width: 78px
+  height: 78px
+  margin: auto
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  .wBall
+    position: absolute
+    width: 74px
+    height: 74px
+    opacity: 0
+    transform: rotate(225deg)
+    -o-transform: rotate(225deg)
+    -ms-transform: rotate(225deg)
+    -webkit-transform: rotate(225deg)
+    -moz-transform: rotate(225deg)
+    animation: orbit 6.96s infinite
+    -o-animation: orbit 6.96s infinite
+    -ms-animation: orbit 6.96s infinite
+    -webkit-animation: orbit 6.96s infinite
+    -moz-animation: orbit 6.96s infinite
+    .wInnerBall
+      position: absolute
+      width: 10px
+      height: 10px
+      background: rgb(0, 0, 0)
+      left: 0px
+      top: 0px
+      border-radius: 10px
+  #wBall_1
+    animation-delay: 1.52s
+    -o-animation-delay: 1.52s
+    -ms-animation-delay: 1.52s
+    -webkit-animation-delay: 1.52s
+    -moz-animation-delay: 1.52s
+  #wBall_2
+    animation-delay: 0.3s
+    -o-animation-delay: 0.3s
+    -ms-animation-delay: 0.3s
+    -webkit-animation-delay: 0.3s
+    -moz-animation-delay: 0.3s
+  #wBall_3
+    animation-delay: 0.61s
+    -o-animation-delay: 0.61s
+    -ms-animation-delay: 0.61s
+    -webkit-animation-delay: 0.61s
+    -moz-animation-delay: 0.61s
+  #wBall_4
+    animation-delay: 0.91s
+    -o-animation-delay: 0.91s
+    -ms-animation-delay: 0.91s
+    -webkit-animation-delay: 0.91s
+    -moz-animation-delay: 0.91s
+  #wBall_5
+    animation-delay: 1.22s
+    -o-animation-delay: 1.22s
+    -ms-animation-delay: 1.22s
+    -webkit-animation-delay: 1.22s
+    -moz-animation-delay: 1.22s
+
+@keyframes orbit
+  0%
+    opacity: 1
+    z-index: 99
+    transform: rotate(180deg)
+    animation-timing-function: ease-out
+
+  7%
+    opacity: 1
+    transform: rotate(300deg)
+    animation-timing-function: linear
+    origin: 0%
+
+  30%
+    opacity: 1
+    transform: rotate(410deg)
+    animation-timing-function: ease-in-out
+    origin: 7%
+
+  39%
+    opacity: 1
+    transform: rotate(645deg)
+    animation-timing-function: linear
+    origin: 30%
+
+  70%
+    opacity: 1
+    transform: rotate(770deg)
+    animation-timing-function: ease-out
+    origin: 39%
+
+  75%
+    opacity: 1
+    transform: rotate(900deg)
+    animation-timing-function: ease-out
+    origin: 70%
+
+  76%
+    opacity: 0
+    transform: rotate(900deg)
+
+  100%
+    opacity: 0
+    transform: rotate(900deg)
+
+
+@-o-keyframes orbit
+  0%
+    opacity: 1
+    z-index: 99
+    -o-transform: rotate(180deg)
+    -o-animation-timing-function: ease-out
+
+  7%
+    opacity: 1
+    -o-transform: rotate(300deg)
+    -o-animation-timing-function: linear
+    -o-origin: 0%
+
+  30%
+    opacity: 1
+    -o-transform: rotate(410deg)
+    -o-animation-timing-function: ease-in-out
+    -o-origin: 7%
+
+  39%
+    opacity: 1
+    -o-transform: rotate(645deg)
+    -o-animation-timing-function: linear
+    -o-origin: 30%
+
+  70%
+    opacity: 1
+    -o-transform: rotate(770deg)
+    -o-animation-timing-function: ease-out
+    -o-origin: 39%
+
+  75%
+    opacity: 1
+    -o-transform: rotate(900deg)
+    -o-animation-timing-function: ease-out
+    -o-origin: 70%
+
+  76%
+    opacity: 0
+    -o-transform: rotate(900deg)
+
+  100%
+    opacity: 0
+    -o-transform: rotate(900deg)
+
+
+@-ms-keyframes orbit
+  0%
+    opacity: 1
+    z-index: 99
+    -ms-transform: rotate(180deg)
+    -ms-animation-timing-function: ease-out
+
+  7%
+    opacity: 1
+    -ms-transform: rotate(300deg)
+    -ms-animation-timing-function: linear
+    -ms-origin: 0%
+
+  30%
+    opacity: 1
+    -ms-transform: rotate(410deg)
+    -ms-animation-timing-function: ease-in-out
+    -ms-origin: 7%
+
+  39%
+    opacity: 1
+    -ms-transform: rotate(645deg)
+    -ms-animation-timing-function: linear
+    -ms-origin: 30%
+
+  70%
+    opacity: 1
+    -ms-transform: rotate(770deg)
+    -ms-animation-timing-function: ease-out
+    -ms-origin: 39%
+
+  75%
+    opacity: 1
+    -ms-transform: rotate(900deg)
+    -ms-animation-timing-function: ease-out
+    -ms-origin: 70%
+
+  76%
+    opacity: 0
+    -ms-transform: rotate(900deg)
+
+  100%
+    opacity: 0
+    -ms-transform: rotate(900deg)
+
+
+@-webkit-keyframes orbit
+  0%
+    opacity: 1
+    z-index: 99
+    -webkit-transform: rotate(180deg)
+    -webkit-animation-timing-function: ease-out
+
+  7%
+    opacity: 1
+    -webkit-transform: rotate(300deg)
+    -webkit-animation-timing-function: linear
+    -webkit-origin: 0%
+
+  30%
+    opacity: 1
+    -webkit-transform: rotate(410deg)
+    -webkit-animation-timing-function: ease-in-out
+    -webkit-origin: 7%
+
+  39%
+    opacity: 1
+    -webkit-transform: rotate(645deg)
+    -webkit-animation-timing-function: linear
+    -webkit-origin: 30%
+
+  70%
+    opacity: 1
+    -webkit-transform: rotate(770deg)
+    -webkit-animation-timing-function: ease-out
+    -webkit-origin: 39%
+
+  75%
+    opacity: 1
+    -webkit-transform: rotate(900deg)
+    -webkit-animation-timing-function: ease-out
+    -webkit-origin: 70%
+
+  76%
+    opacity: 0
+    -webkit-transform: rotate(900deg)
+
+  100%
+    opacity: 0
+    -webkit-transform: rotate(900deg)
+
+
+@-moz-keyframes orbit
+  0%
+    opacity: 1
+    z-index: 99
+    -moz-transform: rotate(180deg)
+    -moz-animation-timing-function: ease-out
+
+  7%
+    opacity: 1
+    -moz-transform: rotate(300deg)
+    -moz-animation-timing-function: linear
+    -moz-origin: 0%
+
+  30%
+    opacity: 1
+    -moz-transform: rotate(410deg)
+    -moz-animation-timing-function: ease-in-out
+    -moz-origin: 7%
+
+  39%
+    opacity: 1
+    -moz-transform: rotate(645deg)
+    -moz-animation-timing-function: linear
+    -moz-origin: 30%
+
+  70%
+    opacity: 1
+    -moz-transform: rotate(770deg)
+    -moz-animation-timing-function: ease-out
+    -moz-origin: 39%
+
+  75%
+    opacity: 1
+    -moz-transform: rotate(900deg)
+    -moz-animation-timing-function: ease-out
+    -moz-origin: 70%
+
+  76%
+    opacity: 0
+    -moz-transform: rotate(900deg)
+
+  100%
+    opacity: 0
+    -moz-transform: rotate(900deg)

@@ -1,0 +1,766 @@
+@import mixin
+@import '../bower_components/jeet/scss/index'
+
+.banner
+  background: url(../img/bg.jpg) no-repeat center 0px
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  background-size: cover
+  position: relative
+
+.header
+  padding-top: 2em
+  .container
+    position: relative
+
+.menu, .social-w3licon
+  margin-top: 1em
+
+//MENU NAVIGATION
+
+.menu
+  position: absolute
+  z-index: 9999
+  right: rem(15px)
+  .navicon
+    background: transparent
+    position: relative
+    height: rem(46px)
+    width: rem(46px)
+    display: block
+    z-index: 9999
+    -webkit-transition: linear 0.5s all
+    -moz-transition: linear 0.5s all
+    -ms-transition: linear 0.5s all
+    -o-transition: linear 0.5s all
+    transition: linear 0.5s all
+    outline: none
+    &:before, &:after
+      background: #fff
+      -webkit-backface-visibility: hidden
+      backface-visibility: hidden
+      content: ""
+      height: rem(3px)
+      left: 0
+      -webkit-transition: 0.8s all
+      -moz-transition: 0.8s all
+      -o-transition: 0.8s all
+      -ms-transition: 0.8s all
+      transition: 0.8s all
+      width: rem(45px)
+    &:before
+      -moz-box-shadow: #fff 0 rem(14px) 0 0
+      -o-box-shadow: #fff 0 rem(14px) 0 0
+      -ms-box-shadow: #fff 0 rem(14px) 0 0
+      -webkit-box-shadow: #fff 0 rem(14px) 0 0
+      box-shadow: #fff 0 rem(14px) 0 0
+      position: absolute
+      top: 0
+    &:after
+      position: absolute
+      top: rem(28px)
+  .navicon--active
+    -webkit-transition: 0.5s all
+    -moz-transition: 0.5s all
+    -moz-transition: 0.5s all
+    -o-transition: 0.5s all
+    transition: 0.5s all
+    &:before
+      -moz-box-shadow: transparent 0 0 0 0
+      -ms-box-shadow: transparent 0 0 0 0
+      -o-box-shadow: transparent 0 0 0 0
+      -webkit-box-shadow: transparent 0 0 0 0
+      box-shadow: transparent 0 0 0 0
+      top: 15px !important
+      -webkit-transform: rotate(225deg)
+      -ms-transform: rotate(225deg)
+      -moz-transform: rotate(225deg)
+      -o-transform: rotate(225deg)
+      transform: rotate(225deg)
+    &:after
+      top: 15px !important
+      -webkit-transform: rotate(315deg)
+      -ms-transform: rotate(315deg)
+      -moz-transform: rotate(315deg)
+      -o-transform: rotate(315deg)
+      transform: rotate(315deg)
+  .toggle
+    display: block
+    position: absolute
+    right: 0
+    width: rem(250px)
+    background-color: #FFF
+    padding: 2em 3em
+    opacity: 0
+    -webkit-transition: 0.5s all
+    -moz-transition: 0.5s all
+    -o-transition: 0.5s all
+    -ms-transition: 0.5s all
+    transition: 0.5s all
+    -webkit-transform: translateY(-200%)
+    -moz-transform: translateY(-200%)
+    -o-transform: translateY(-200%)
+    -ms-transform: translateY(-200%)
+    -ms-transform: translateY(-200%)
+    transform: translateY(-200%)
+    z-index: 99999
+    -webkit-box-shadow: 0px 0px 7px #696868
+    -moz-box-shadow: 0px 0px 7px #696868
+    -o-box-shadow: 0px 0px 7px #696868
+    -ms-box-shadow: 0px 0px 7px #696868
+    box-shadow: 0px 0px 7px #696868
+  .toggle--active
+    opacity: 1
+    -webkit-transition: 0.5s all
+    -moz-transition: 0.5s all
+    -o-transition: 0.5s all
+    -ms-transition: 0.5s all
+    transition: 0.5s all
+    -webkit-transform: translateY(0)
+    -ms-transform: translateY(0)
+    -o-transform: translateY(0)
+    -moz-transform: translateY(0)
+    transform: translateY(0)
+  .toggle-menu li
+    display: block
+    margin: 1em auto
+    text-align: center
+    a
+      text-decoration: none
+      color: #999
+      display: inline-block
+      text-align: center
+      font-size: 1.1em
+      font-weight: 400
+      margin: rem(6px) 0
+      position: relative
+      text-transform: uppercase
+      -webkit-transition: 0.5s all
+      -moz-transition: 0.5s all
+      -o-transition: 0.5s all
+      -ms-transition: 0.5s all
+      transition: 0.5s all
+      &:hover, &.active
+        color: #4378ff
+        -webkit-transform: scale(1.2)
+        -ms-transform: scale(1.2)
+        -moz-transform: scale(1.2)
+        -o-transform: scale(1.2)
+        transform: scale(1.2)
+        font-weight: 700
+
+//HOVER EFFECTS
+
+.effect-3 a
+  &:before, &:after
+    content: ""
+    height: 1px
+    width: 0
+    opacity: 0
+    background-color: #4378ff
+    position: absolute
+    -webkit-transition: all .5s
+    -moz-transition: all .5s
+    -o-transition: all .5s
+    -ms-transition: all .5s
+    transition: all .5s
+  &:before
+    top: -3px
+  &:after
+    bottom: -3px
+    right: 0
+  &:hover
+    &:before, &:after
+      width: calc(100% + 20px)
+      opacity: 1
+
+.menu .toggle-menu li a.active
+  &:before, &:after
+    width: calc(100% + 20px)
+    opacity: 1
+
+//MENU NAV
+
+.logo
+  float: left
+  text-align: center
+  h1
+    font-size: 3.5em
+    color: #fff
+    font-weight: 100
+    font-family: 'Roboto Condensed', sans-serif
+    font-style: italic
+    a
+      color: #ffae00
+      text-decoration: none
+      outline: none
+      &:hover
+        color: #ffae00
+        text-decoration: none
+        outline: none
+
+//SOCIAL ICONS
+
+.banner__social
+  float: right
+  margin-right: 15em
+  a
+    font-size: 1em
+    color: #fff
+    margin: 0 0.2em
+    display: inline-block
+    -webkit-transition: .5s all
+    -moz-transition: .5s all
+    -o-transition: .5s all
+    -ms-transition: .5s all
+    transition: .5s all
+    width: rem(30px)
+    height: rem(30px)
+    line-height: 2.1em
+    border: 1px dashed transparent
+    text-align: center
+    &:hover
+      border-color: #fff
+      -webkit-border-radius: 50%
+      -moz-border-radius: 50%
+      border-radius: rem(10px) 0px rem(10px) 0px
+
+//BANNER TEXT
+
+.banner__text
+  padding: 17em 0 14em 0
+  text-align: left
+
+.banner__text__main
+  margin: 0 auto
+  display: inline-block
+  padding: 2em 3.5em
+  background: rgba(0, 0, 0, 0.55)
+
+.banner__text
+  h2
+    font-size: 6em
+    color: #fff
+    text-align: center
+    font-style: italic
+    font-weight: 400
+    position: relative
+    letter-spacing: 3px
+    line-height: 1.2em
+    border: 1px solid #fff
+    padding-right: 1.14em
+    padding-left: 0.5em
+    span
+      font-size: .2em
+      color: #fff
+      font-style: italic
+      font-weight: 300
+      letter-spacing: 5px
+      position: absolute
+      top: -17%
+      right: 7%
+      font-family: 'Playfair Display', serif
+    &:first-letter
+      font-size: 2em
+      color: #fff
+      margin-right: rem(-20px)
+  p
+    font-size: 0.9em
+    color: #fff
+    line-height: 2em
+    margin: 1em 0 0
+    font-weight: 300
+    letter-spacing: 4px
+
+.banner__text__desc
+  text-align: left
+  text-transform: none
+
+//SKILL BAR
+
+.skillbar
+  position: relative
+  display: inline-block
+  margin: rem(15px) 0
+  width: 100%
+  background: #eee
+  height: rem(30px)
+  -webkit-border-radius: rem(3px)
+  -moz-border-radius: rem(3px)
+  -o-border-radius: rem(3px)
+  -ms-border-radius: rem(3px)
+  border-radius: rem(3px)
+  width: 100%
+
+.skillbar-title
+  position: absolute
+  top: 0
+  left: 0
+  width: rem(110px)
+  font-weight: bold
+  font-size: rem(13px)
+  color: #fff
+  background: #6adcfa
+  border-top-left-radius: rem(3px)
+  border-bottom-left-radius: rem(3px)
+  background: rgba(0, 0, 0, 0.1)
+  padding: 0 rem(20px)
+  height: rem(30px)
+  line-height: rem(35px)
+
+.skillbar-bar
+  height: rem(30px)
+  width: 0px
+  background: #6adcfa
+  -webkit-border-radius: rem(3px)
+  -moz-border-radius: rem(3px)
+  border-radius: rem(3px)
+  display: inline-block
+
+.skill-bar-percent
+  position: absolute
+  right: rem(10px)
+  top: 0
+  font-size: rem(11px)
+  height: rem(30px)
+  line-height: rem(30px)
+  color: rgba(0, 0, 0, 0.88)
+
+//SKILL BAR EFFECTS
+
+@media (max-width: 1080px)
+  .banner-w3lstext
+    padding: 2.5em
+  .banner__text
+    padding: 12em 0
+  a.wthree-more
+    &::before, > span
+      padding: 0.8em 0
+  .about-right
+    h3
+      font-size: 2.2em
+    h4
+      margin-top: 1em
+  .hire-w3lgrids
+    margin-top: 1.5em
+  .social-wthree-icons ul
+    margin-top: 2em
+  .w3ls-title
+    margin-bottom: 3em
+  .experience-grids
+    width: 100%
+  .experience-left
+    width: 28%
+  .experience-right
+    width: 72%
+    padding: 2.5em 2em
+  .view-tenth .mask
+    padding: 2.5em
+
+@media (max-width: 1024px)
+  .profile-grids h5
+    margin-bottom: 1em
+  .menu .toggle
+    padding: 1.5em 3em
+
+@media (max-width: 991px)
+  .banner__text h2
+    font-size: 5.5em
+  .banner-w3lstext
+    padding: 2em
+  .banner__text h2 span
+    letter-spacing: 3px
+    right: 12%
+  .w3agile-address ul li
+    width: inherit
+    &:nth-child(2)
+      margin: 0 5em
+  ul.address li ul.agileits-address-text li
+    &:nth-child(1)
+      width: 30%
+    margin-top: 1.2em
+  .about-right h3
+    font-size: 2em
+  .about-text
+    padding: 2em 1em 0
+  .skill-grids
+    margin: 2em 0
+  .stats-grid
+    margin: 3em 0
+  .numscroller
+    font-size: 2.5em
+  .stats i.fa
+    font-size: 2em
+  .experience-left
+    padding: 5.5em 0
+  .social-w3licon
+    margin-right: 6em
+  .agileits_w3layouts_gallery_grid
+    padding: 0 .5em
+  .agileits_w3layouts_gallery_grid1.hover14
+    padding: 0.5em 0
+  .view-tenth
+    .mask
+      padding: 1em
+    h3
+      font-size: 1.8em
+      margin-bottom: .3em
+  .w3agile-contact-grids p
+    margin-top: 2em
+  .ctact-w3left textarea
+    min-height: 150px
+  h2.agileits-title
+    font-size: 2.6em
+
+@media (max-width: 800px)
+  .logo h1
+    font-size: 3em
+  .menu, .social-w3licon
+    margin-top: 0.5em
+  .banner__text
+    h2
+      font-size: 5em
+    p
+      letter-spacing: 3px
+    padding: 10em 0
+  .w3agile-address
+    padding: 0 0 2em
+  .menu
+    .toggle-menu li a
+      font-size: 1em
+      margin: 4px 0
+    .toggle
+      width: 230px
+  .about-text p:first-letter
+    font-size: 5em
+
+@media (max-width: 768px)
+  .experience-grids.experience-grids-btm
+    margin: 2em auto
+
+@media (max-width: 736px)
+  .banner__text p
+    letter-spacing: 2px
+  .w3agile-address ul li
+    font-size: 1em
+  .banner__text
+    padding: 8em 0
+  .about-left
+    img
+      border-width: 12px
+    padding: 0 16em
+  .about-right
+    h3
+      font-size: 1.8em
+    &.wthree
+      margin-top: 2em
+    h4
+      font-size: 0.9em
+  .about
+    padding: 4em 0
+  .w3ls-title
+    margin-bottom: 2em
+  .skills h4
+    font-size: 1.6em
+    margin-bottom: 0.6em
+  .skills-w3lsright
+    margin-top: 2em
+  .skillbar
+    margin: 12px 0
+  .stats-grid
+    &:nth-child(1), &:nth-child(2)
+      margin-bottom: 0em
+  .experience-right h4
+    font-size: 1.5em
+  .view-tenth p
+    letter-spacing: 0
+  h2.agileits-title
+    font-size: 2.3em
+    left: 36%
+
+@media (max-width: 667px)
+  .banner__text
+    h2 span
+      letter-spacing: 2px
+      right: 8%
+    p
+      margin: 0.5em 0 0
+  .banner-w3lstext
+    padding: 1.5em
+  .banner__text
+    padding: 7em 0 6em
+  .w3agile-address ul li:nth-child(2)
+    margin: 0 3em
+  .about-left
+    padding: 0 14em
+  .experience-right
+    padding: 1.5em 1.5em
+  .banner.about-w3banner .w3agile-address
+    padding: 4em 0
+  .ctact-w3left
+    padding: 2em
+    textarea
+      margin-bottom: 0.5em
+  .profile-grids
+    padding: 1.5em 2em
+    margin-top: 1em
+
+@media (max-width: 640px)
+  .experience-left h6
+    font-size: 1.5em
+
+@media (max-width: 600px)
+  .banner__text
+    h2
+      font-size: 4.5em
+    p
+      letter-spacing: 1px
+  .w3agile-address ul li
+    font-size: 0.9em
+    &:nth-child(2)
+      margin: 0 2em
+  .banner__text
+    padding: 6em 0 5em
+  .header
+    padding-top: 1.5em
+  .banner.about-w3banner .w3agile-address
+    padding: 3em 0
+  h2.agileits-title
+    font-size: 2em
+    left: 34%
+  .about-left
+    padding: 0 11em
+  .w3ls-title
+    margin-bottom: 1em
+  .about-text p:first-letter
+    font-size: 4em
+  .about-right h3
+    font-size: 1.6em
+  ul.address li ul.agileits-address-text li
+    font-size: 1em
+  .experience-left h5
+    letter-spacing: 1px
+  .experience-right h4
+    font-size: 1.3em
+  .agileits_w3layouts_gallery_grid
+    padding: 0 .1em
+  .agileits_w3layouts_gallery_grid1.hover14
+    padding: 0.1em 0
+  .view-tenth
+    h3
+      font-size: 1.5em
+    p
+      line-height: 1.6em
+  .ctact-w3left
+    span i
+      width: 20%
+    input
+      &[type="text"], &[type="email"]
+        width: 80%
+    textarea
+      width: 80%
+  .w3agile-footer
+    padding: 1.5em 0
+
+@media (max-width: 480px)
+  .menu .toggle
+    width: 210px
+    padding: 1em
+  .social-w3licon
+    a
+      font-size: 0.9em
+      width: 28px
+      height: 28px
+      line-height: 2.4em
+    margin-right: 5em
+  .banner__text
+    h2
+      font-size: 4em
+    p
+      letter-spacing: 0.5px
+  .w3agile-address ul li
+    &:nth-child(2)
+      margin: 1em 0
+    display: block
+  .about-left
+    padding: 0 7em
+  .experience-left
+    padding: 2em 0
+    width: 100%
+    float: none
+    h5
+      font-size: 0.9em
+      margin-top: 0.8em
+  .experience-right
+    width: 100%
+    float: none
+    border: 1px solid #4378ff
+    margin: 0
+  .experience-left
+    padding: 2em 0
+    width: 100%
+    float: none
+  .experience-grids.experience-grids-btm
+    .experience-left
+      float: none
+    .experience-right
+      border: 1px solid #4378ff
+  ul.address li ul.agileits-address-text li
+    margin-top: 1em
+  .about-right.wthree
+    padding-left: 2em
+  p
+    letter-spacing: 0px
+  .numscroller
+    font-size: 2em
+  .stats-info p
+    letter-spacing: 2px
+    font-size: 1em
+  .agileits_w3layouts_gallery_grid
+    padding: 0 1em
+    width: 100%
+    float: none
+  .view-tenth
+    .mask
+      padding: 3em
+    h3
+      font-size: 2em
+      padding-bottom: 0.8em
+      margin-bottom: 1em
+  .w3layouts_gallery_grid1
+    margin: 0
+  .agileits_w3layouts_gallery_grid1.hover14
+    padding: 1em 0
+
+@media (max-width: 414px)
+  .logo h1
+    font-size: 2.5em
+  .social-w3licon a
+    margin: 0
+  .about-right.wthree
+    padding: 0
+  ul.address li b
+    letter-spacing: 3px
+  a.wthree-more
+    padding: 0 2em
+    font-size: 0.9em
+  h2.agileits-title
+    left: 28%
+  .about
+    padding: 3em 0
+  .stats-grid
+    margin: 2em 0
+  .stats i.fa
+    font-size: 1.8em
+  .w3agile-contact-grids
+    padding: 0
+  .ctact-w3left
+    padding: 1.5em
+
+@media (max-width: 384px)
+  .banner__text
+    h2
+      font-size: 3.5em
+    p
+      letter-spacing: 0
+    padding: 5em 0 4em
+  .menu .toggle-menu li a
+    font-size: 0.9em
+    margin: 3px 0
+  .about-left
+    padding: 0 4em
+  .social-wthree-icons ul
+    margin-top: 1.5em
+  .about-text
+    padding: 2em 0em 0
+  .skills-w3lsright
+    padding: 0
+  .skillbar
+    margin: 8px 0
+  .experience-left
+    padding: 1.2em 0
+  .view-tenth h3
+    padding-bottom: 0.5em
+    margin-bottom: 0.6em
+  h2.agileits-title
+    left: 24%
+  .ctact-w3left span i
+    font-size: .9em
+  .w3agile-contact-grids p
+    margin-top: 1.5em
+
+@media (max-width: 375px)
+  .agileits_w3layouts_gallery_grid
+    padding: 0
+  .agileits_w3layouts_gallery_grid1.hover14
+    padding: 0.5em 0
+  .ctact-w3left
+    textarea
+      min-height: 120px
+    input[type="submit"]
+      padding: .7em 1.5em
+      font-size: 0.9em
+
+@media (max-width: 320px)
+  .menu .navicon
+    &:before
+      top: -2px
+      width: 41px
+    &:after
+      width: 41px
+      top: 26px
+    height: 41px
+    width: 41px
+  .banner__text
+    h2
+      font-size: 3em
+      &:first-letter
+        margin-right: -10px
+    padding: 4em 0 3em
+  .w3agile-address ul li
+    font-size: 0.85em
+  p
+    font-size: 0.9em
+  .about-left
+    padding: 0 2em
+  .about-right
+    h3
+      font-size: 1.4em
+    h4
+      letter-spacing: 1px
+  ul.address
+    margin-top: 1em
+    li
+      ul.agileits-address-text li
+        font-size: 0.9em
+      b
+        letter-spacing: 2px
+      ul.agileits-address-text li:nth-child(1)
+        width: 27%
+  h2.agileits-title
+    left: 21%
+    font-size: 1.8em
+  .experience-right h4
+    font-size: 1.2em
+    letter-spacing: 0px
+  .ctact-w3left
+    span i
+      width: 40%
+      margin: 0
+    input
+      &[type="text"], &[type="email"]
+        width: 100%
+        margin-top: .5em
+        font-size: 0.9em
+    textarea
+      width: 100%
+      margin-top: .5em
+      font-size: 0.9em
+    input[type="submit"]
+      font-size: 0.85em
+  .profile-grids
+    padding: 1.5em
+  .experience-grids.experience-grids-btm
+    margin: 1.5em auto
+  .view-tenth .mask
+    padding: 2em

@@ -1,0 +1,742 @@
+@import '../bower_components/jeet/scss/index'
+@import mixin
+@import baner
+@import style2
+//@import footer
+body
+  padding: 0
+  margin: 0
+  width: 100%
+  height: 100%
+  color: #1c2d33
+  font-family: $fontRoboto
+
+body a
+  transition: 0.5s all
+  -webkit-transition: 0.5s all
+  -moz-transition: 0.5s all
+  -o-transition: 0.5s all
+  -ms-transition: 0.5s all
+  text-decoration: none
+  outline: none
+  &:hover, &:focus
+    text-decoration: none
+    outline: none
+
+
+.container
+  +center(rem(1180px))
+  padding: 0 rem(10px)
+
+.hr_class
+  margin-top: rem(30px)
+  border-top: 2px solid $mainColor
+  width: rem(80px)
+
+//about start
+.about
+  +column(12/12)
+  margin-bottom: rem(115px)
+
+  &__heading
+    +column(12/12)
+    margin-top: rem(115px)
+    position: relative
+    margin-bottom: rem(50px)
+    &_desc
+      +align()
+
+  &__left
+    +column(1/2, $gutter: 3, $cycle: 2)
+    &__heading
+      font-size: rem(24px)
+      color: $mainColor
+      line-height: 1
+      font-weight: bold
+    &__text
+      font-family: $fontRaleway
+      color: rgb(35, 35, 35)
+      line-height: 1.714
+      margin-left: rem(-10px)
+
+    &__button
+      margin-top: rem(23px)
+      &__button1
+        display: inline-block
+        text-align: center
+        background-color: $mainColor
+        color: #fff
+        width: rem(40px)
+        height: rem(40px)
+        padding-top: rem(10px)
+        margin-right: rem(3px)
+
+      &__button1:hover
+        color: #fff
+
+      &__button2
+        text-align: center
+        display: inline-block
+        background-color: $mainColor
+        color: #fff
+        width: rem(180px)
+        height: rem(40px)
+        padding-top: rem(10px)
+        font-family: $fontRaleway
+
+      &__button2:hover
+        color: #fff
+
+  &__right
+    +column(1/2, $gutter: 3, $cycle: 2)
+    &__heading
+      font-size: rem(24px)
+      color: $mainColor
+      line-height: 1
+      font-weight: bold
+
+.about__heading
+  font-size: rem(35px)
+  color: $mainColor
+  font-weight: bold
+  line-height: 0.686
+  text-align: center
+
+.hr_class__aboutright
+  margin-bottom: rem(30px)
+  border-top: rem(2px) solid $mainColor
+  width: rem(50px)
+  text-align: left
+  position: relative
+  left: rem(-255px)
+//about end
+//skills start
+.skills
+  +column(12/12)
+  padding-top: rem(90px)
+  padding-bottom: rem(90px)
+  background-image: url("../img/bg_top.jpg")
+  height: rem(400px)
+  position: relative
+  background-attachment: fixed
+  background-size: cover
+
+
+.skills__item
+  +column(4/12, $gutter: 3, $cycle: 3)
+  text-align: center
+  font-family: $fontRaleway
+  color: #fff
+
+  &__icon
+    background-color: $mainColor
+    color: #fff
+    width: rem(80px)
+    height: rem(80px)
+    text-align: center
+    left: rem(140px)
+    position: relative
+    border-radius: rem(10px) 0 rem(10px) 0
+    padding-top: rem(26px)
+
+
+  &__heading
+    font-size: rem(24px)
+    margin-top: rem(20px)
+    margin-bottom: rem(17px)
+
+
+  &__desc
+    font-size: rem(14px)
+    font-family: 'Raleway Thin', sans-serif
+    margin-bottom: rem(25px)
+    line-height: 1.714
+
+.items
+  +column(12/12)
+  padding-top: rem(100px)
+  padding-bottom: rem(100px)
+  background-image: url("../img/bg_middle3.jpg")
+  position: relative
+  background-attachment: fixed
+  background-size: cover
+
+  &__text
+    padding-top: rem(30px)
+.items__item
+  +column(1/5, $gutter: 3, $cycle: 5)
+  text-align: center
+  color: #fff
+
+  &__text
+    font-size: rem(22px)
+    margin-top: rem(20px)
+    margin-bottom: rem(17px)
+
+.skills__item__icon_mod
+  left: rem(64px)
+
+
+
+.work
+  +column(12/12)
+  padding-bottom: rem(70px)
+  text-align: center
+
+  &__heading
+    text-align: center
+    font-size: rem(40px)
+    margin-bottom: rem(25px)
+  &__desc
+    text-align: center
+    font-size: rem(15px)
+    margin-top: rem(20px)
+    font-family: $fontRaleway
+    line-height: 1.6
+    color: rgb(35, 35, 35)
+
+.work__bottom
+    +column(12/12)
+    text-align: center
+    margin-top: 2rem
+    margin-bottom: rem(100px)
+
+.work__button
+    text-align: center
+    position: relative
+    margin-top: rem(80px)
+
+
+.work__button_1
+  +column(1/2, $gutter: 3, $cycle: 2)
+  text-align: right
+  left: rem(440px)
+
+.work__button__text
+  display: inline-block
+  position: relative
+  top: -5px
+  right: -5px
+
+
+.work__btn
+  font-family: 'Raleway', sans-serif
+  font-size: 1rem
+  font-weight: normal
+  text-decoration: none
+  cursor: pointer
+  display: inline-block
+  line-height: normal
+  padding: .3rem 1rem
+  margin: 0.3572rem 0.1428rem 4rem 0.1428rem
+  height: auto
+  border-radius: 0.71rem 0 0.71rem 0
+  vertical-align: middle
+  -webkit-appearance: none
+  color: #fff
+  background-color: #ffae00
+  width: rem(130px)
+  position: absolute
+
+
+.work__button_2
+  +column(1/2, $gutter: 3, $cycle: 2)
+  text-align: left
+  width: rem(130px)
+  right: rem(440px)
+
+.about__heading_work
+  margin-bottom: 0
+
+
+//skills start
+.statistic
+  +column(12/12)
+  padding-top: rem(100px)
+  padding-bottom: rem(100px)
+  background-image: url("../img/bg_middle2.jpg")
+
+//statistics start
+.statistics
+  background-image: url("../img/bg_middle.jpg")
+.items__item__stat
+  +column(1/4, $gutter: 3, $cycle: 4)
+  text-align: center
+  left: 50px
+
+
+.tatistics__item
+  text-align: center
+
+.skills__item__icon__statmod
+  left: 6.5rem
+
+.statistics__item__span
+  font-family: $fontRaleway
+  font-size: rem(24px)
+  line-height: 1
+  padding: rem(2px)
+//statistics end
+
+//feedback start
+.feedback
+  +column(12/12)
+  padding: rem(70px) 0
+
+
+  &__heading
+    text-align: center
+    font-size: rem(35px)
+    margin-bottom: 4.78571rem
+    font-family: 'Roboto slab', sans-serif
+    color: #ffae00
+
+  &__items_img
+    +column(1/4, $gutter: 3, $cycle: 2)
+
+  &__items_desc
+    +column(3/4, $gutter: 3, $cycle: 2)
+
+  &__items_text
+    +column(12/12)
+    text-align: right
+
+.feedback__items
+  height: rem(238px)
+  background: #f9f9f9
+  border: rem(1px) solid #eeeeee
+  padding: rem(50px) rem(20px) rem(50px) rem(20px)
+//feedback end
+
+//TOUCH START
+
+.touch
+  +column(12/12)
+  background-image: url("../img/bg_bottom.jpg")
+  background-repeat: no-repeat
+  background-size: cover
+  text-align: center
+
+  &__fon
+    padding: rem(50px) 0
+
+  &__out
+    z-index: 2
+
+  &__title
+    margin-top: rem(40px)
+    color: $mainColor
+    font-family: $fontRoboto
+    text-transform: uppercase
+    text-align: center
+    font-size: rem(35px)
+
+  &__line
+    display: inline-block
+    width: 10%
+    margin: rem(20px) 0
+    border-bottom: 1px solid $mainColor
+
+  &__form
+    +column(12/12)
+    margin-top: 50px
+    margin-bottom: 50px
+
+  &__one
+    +column(6/12)
+    text-align: left
+
+  &__two
+    +column(6/12)
+    text-align: left
+
+
+  &__link
+    +column(1/10, $gutter: 0)
+    +move(2/10)
+    background: $mainColor
+    text-align: center
+    box-sizing: border-box
+    padding: rem(10px)
+    font-size: rem(24px)
+    color: #fff
+
+  &__input
+    +column(7/10, $gutter: 0)
+    +move(2/10)
+    background: none
+    margin: 0
+    margin-bottom: rem(20px)
+    padding: 1.15rem
+    border: 1px solid #fff
+    border-left: none
+    color: #fff
+
+  &__input__area
+    +column(8/10, $gutter: 0)
+    background: none
+    margin: 0
+    margin-bottom: 1.4rem
+    padding: 0.3rem
+    border: 1px solid #fff
+    box-sizing: border-box
+    resize: none
+    color: #fff
+
+  &__input:hover
+    color: #fff
+    border-color: #fff
+
+  &__btn
+    +column(6/12)
+    text-align: right
+
+  &__href
+    +column(8/10, $gutter: 0)
+    text-align: center
+    font-family: $fontRaleway
+    font-size: rem(24px)
+    color: #fff
+    background: $mainColor
+    border: none
+    padding: 0.65rem
+
+.touch__item
+  +column(12/12)
+//CONTACT end
+
+//WORKAREA START
+.workarea
+  padding-top: 1.14286rem
+  +column(12/12)
+  text-align: center
+  margin-bottom: 10.14286rem
+
+  &__top
+    width: 60%
+    margin: 0 auto
+    padding: 10px
+    position: relative
+
+  &__icons
+    z-index: 2
+    +column(1/2, $gutter: 0, $cycle: 2)
+    text-align: center
+    padding: rem(80px) rem(20px)
+
+  &__link
+    text-decoration: none
+    color: $mainColor
+    background: #fff
+    padding: rem(20px)
+    border-radius: 10px 0px
+    font-size: rem(35px)
+    border: 1px solid #dadada
+
+  &__title__big
+    margin-top: rem(40px)
+    font-size: rem(24px)
+    font-family: 'Roboto Slab Bold', sans-serif
+    color: $mainColor
+    font-weight: bold
+    text-transform: uppercase
+
+  &__title
+    margin-top: 1.75714rem
+    font-size: rem(24px)
+    font-family: $fontRaleway
+    font-weight: bold
+    text-transform: uppercase
+    line-height: 1.917
+    color: rgb(28, 45, 51)
+
+  &__line
+      display: inline-block
+      width: 10%
+      margin: rem(20px) 0
+      border-bottom: 1px solid $mainColor
+
+  &__text
+    margin-top: 0.7rem
+    font-size: rem(14px)
+    font-family: $fontRaleway
+    line-height: 1.714
+
+  &__border
+    position: absolute
+    padding: rem(3px)
+    background: rgba(12,12,12,0.2)
+    border-radius: 50%
+    top: rem(675px)
+    left: 50%
+    transform: translate(-50%, -50%)
+
+  &__circle
+    +column(12/12)
+    padding: 1.81429rem
+    background: #fff
+    border-radius: 50%
+
+  &__little
+    padding: rem(6px)
+    background: $mainColor
+    border-radius: 50%
+
+  &__icons:hover
+    background: $mainColor
+    color: #fff
+
+.skills__item__icon__workarea
+  background-color: #fff
+  color: $mainColor
+  border: 1px solid #dadada
+
+.workarea__icons__first
+  border-right: 1px solid #dadada
+  border-bottom: 1px solid #dadada
+
+.workarea__icons__last
+  border-left: 1px solid #dadada
+  border-top: 1px solid #dadada
+//WORKAREA END
+
+::-webkit-input-placeholder
+  color: #b0aeae
+//FOOTER START
+.footer
+  +column(12/12)
+  background-color: #141313
+  color: #fff
+
+  &__p
+    color: #b0aeae
+    padding-top: rem(30px)
+    padding-bottom: rem(20px)
+    font-family: $fontRaleway
+    font-size: rem(14px)
+    text-align: center
+
+
+//FOOTER END
+//ARROWS FOR OWL CAROUSEL
+.owl-nav
+  text-align: center
+
+.owl-prev
+  border: 1px solid $mainColor
+  color: #202020
+  border-radius: 0.71rem 0 0.71rem 0
+  display: inline-block
+  padding: rem(6px) rem(14px)
+  margin-top: rem(30px)
+  margin-right: rem(4px)
+  text-align: center
+
+.owl-next
+  border: 1px solid $mainColor
+  color: #202020
+  border-radius: 0.71rem 0 0.71rem 0
+  display: inline-block
+  padding: rem(6px) rem(14px)
+  margin-top: rem(30px)
+  margin-right: rem(4px)
+  text-align: center
+
+
+.about__left
+  +phone()
+    +column(12/12, $cycle: 1)
+    margin-right: rem(20px)
+    margin-left: rem(20px)
+
+.about__right
+  +phone()
+    +column(12/12, $cycle: 1)
+    margin-right: rem(20px)
+    margin-left: rem(20px)
+
+.about__right__heading
+  +phone()
+    margin-top: rem(50px)
+
+.skills__item
+  +phone()
+    +column(12/12, $cycle: 1)
+    text-align: center
+
+.skills
+  +phone()
+    height: rem(900px)
+
+.items
+  +phone()
+    height: rem(1000px)
+
+.items__item
+  +phone()
+    +column(12/12, $cycle: 1)
+    text-align: center
+    margin-top: rem(20px)
+
+.tile
+  +phone()
+    width: 100%
+    margin-top: rem(15px)
+
+.view-tenth h3
+  +phone()
+    margin-top: 0
+
+.feedback__items
+  +phone()
+    height: rem(320px)
+
+.touch__one
+  +phone()
+    +column(12/12)
+    text-align: center
+
+.touch__two
+  +phone()
+    +column(12/12)
+    text-align: center
+
+.touch__link
+  +phone()
+    left: rem(17px)
+    width: 20%
+
+.touch__input
+  +phone()
+    left: rem(17px)
+
+.touch__input__area
+  +phone()
+    margin-left: 6%
+    width: 90%
+
+.touch__href
+  +phone()
+    margin-left: 6%
+    width: 90%
+
+.workarea__border
+  +phone()
+    display: none
+
+.workarea__icons
+  +phone()
+    width: 100%
+    padding: rem(80px) 0
+
+.workarea__icons__first
+  +phone()
+    border-right: none
+    border-bottom: none
+
+.workarea__icons__last
+  +phone()
+    border-left: none
+    border-top: none
+
+.skills__item__icon
+  +phone()
+    left: 30%
+
+.work__button_1
+  +phone()
+    left: 3%
+    margin-top: rem(30px)
+
+.work__button_2
+  +phone()
+    left: 53%
+    margin-top: rem(30px)
+
+.about__left
+  +tablet()
+    +column(12/12, $cycle: 1)
+    margin-right: rem(50px)
+    margin-left: rem(50px)
+
+.about__right
+  +tablet()
+    +column(12/12, $cycle: 1)
+    margin-top: rem(30px)
+    margin-right: rem(50px)
+    margin-left: rem(50px)
+
+.workarea__border
+  +tablet()
+    display: none
+
+.workarea__icons
+  +tablet()
+    width: 100%
+    padding: rem(80px) 0
+
+.workarea__icons__first
+  +tablet()
+    border-right: none
+    border-bottom: none
+
+.workarea__icons__last
+  +tablet()
+    border-left: none
+    border-top: none
+
+.touch__one
+  +tablet()
+    +column(12/12)
+    text-align: center
+
+.touch__two
+  +tablet()
+    +column(12/12)
+    text-align: center
+
+.touch__link
+  +tablet()
+    left: rem(75px)
+    width: 10%
+
+
+.touch__input
+  +tablet()
+    left: rem(75px)
+    text-align: left
+
+.touch__input__area
+  +tablet()
+    margin-left: 10%
+    width: 80%
+    text-align: left
+
+.touch__href
+  +tablet()
+    margin-left: 10%
+    width: 80%
+
+.workarea__border
+  +laptop()
+    display: none
+
+.workarea__icons__first
+  +laptop()
+    border-right: none
+    border-bottom: none
+
+.workarea__icons__last
+  +laptop()
+    border-left: none
+    border-top: none
+
+.work__button_1
+  +laptop()
+    left: 35%
+    margin-top: rem(30px)
+
+.work__button_2
+  +laptop()
+    left: 50%
+    margin-top: rem(30px)

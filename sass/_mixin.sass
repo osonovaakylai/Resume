@@ -1,0 +1,25 @@
+$fontRoboto: 'Roboto Slab', sans-serif
+$fontRaleway: 'Raleway', sans-serif
+$mainColor: #ffae00
+
+@function rem($px)
+  $result: $px / 14px + 0rem
+  @return $result
+
+=desktop
+  @media screen and (max-width: 1200px)
+    @content
+
+=laptop
+  @media screen and (max-width: 992px)
+    @content
+
+=tablet
+  @media screen and (max-width: 768px)
+    @content
+
+=phone
+  @media screen and (max-width: 480px)
+    @content
+
+
